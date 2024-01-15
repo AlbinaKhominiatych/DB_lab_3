@@ -1,4 +1,5 @@
---Вивести назви захворювань під назвою « Name of
---Disease» та ступінь їхньої тяжкості під назвою «Severity
---of Disease».
-SELECT Name AS "Name of Disease", Severity AS "Severity of Disease" FROM Diseases;
+--Вивести назви захворювань усіх ступенів тяжкості, крім 1-го та 2-го.
+
+SELECT Name
+FROM Diseases
+WHERE Severity NOT IN (1, 2)
